@@ -1,0 +1,51 @@
+﻿@model LoginApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-center">Delete User</h1>
+<br />
+<div class="container">
+    <h3>@Model.FirstName @Model.LastName , are you sure you want to delete this user?</h3>
+
+    <dl class="row">
+        <dt class="col-sm-2">User ID:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.UserID)</dd>
+
+        <dt class="col-sm-2">First Name:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.FirstName)</dd>
+
+        <dt class="col-sm-2">Last Name:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.LastName)</dd>
+
+        <dt class="col-sm-2">Email:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Email)</dd>
+
+        <dt class="col-sm-2">Password:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Password)</dd>
+
+        <dt class="col-sm-2">Date of Birth:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.DOB)</dd>
+
+        <dt class="col-sm-2">Gender:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Gender)</dd>
+
+        <dt class="col-sm-2">Phone Number:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.PhoneNumber)</dd>
+
+        <dt class="col-sm-2">Address:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Address)</dd>
+
+        <dt class="col-sm-2">PIN:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Pin)</dd>
+
+        <dt class="col-sm-2">Profile Photo:</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.ProfilePhotoPath)</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-primary">Cancel</a>
+    </form>
+</div>
